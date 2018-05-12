@@ -1,0 +1,318 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@font-face {
+    font-family: BEBAS;
+    src: url(BEBAS.ttf);
+}
+
+@font-face {
+    font-family: Canterbury;
+    src: url(canterbury.regular.ttf);
+}
+
+@font-face {
+    font-family: Carson;
+    src: url(carson.regular.otf);
+}
+
+@font-face {
+    font-family: Antic;
+    src: url(antic-didone.regular.ttf);
+}
+
+$black: #000000;
+$white: #ffffff;
+$fastTransition: all 0.2s ease;
+$slowTransition: all 0.5s ease;
+
+body {
+    background-color: #0B0B19 !important;
+}
+
+#loaderBackground {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    transition: $slowTransition;
+    z-index:9998;
+    width:100%;
+    height:100%;
+    background-color:#15253B;
+}
+
+#loaderBackground[active="true"] {
+    top: 0;
+}
+
+#loaderHolder {
+    top: -40%;
+    left: 40%;
+    width:20%;
+    text-align: center;
+    position: fixed;
+    z-index: 9999;
+    transition: $slowTransition;
+}
+
+#loaderHolder[active="true"] {
+    top: 40%;
+}
+
+#loaderHolder[close="true"] {
+    transform: rotate(360deg);
+    opacity:0.0;
+}
+
+.loader {
+    height: 100px;
+    width: 100%;
+    border: 2px solid #D7AD00;
+    text-align: center;
+    border-radius: 100px;
+    background: #D7AD00 url(bat.png) no-repeat center;
+    background-size: 35%;
+    box-shadow: 0px 10px 40px $black;
+    overflow: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+    animation-name: colourChanger;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transition: $slowTransition;
+}
+
+.loaderText {
+    text-align: center;
+    color: #005F15;
+    font-family: 'Carson', Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 20px;
+    transition: $fastTransition;
+}
+
+.ready {
+    background-color: #005F15;
+    color: $white;
+    border-radius: 5px;
+    padding:5px;
+    border:2px solid rgb(1, 68, 20);
+}
+
+@keyframes colourChanger {
+    0% {
+        background: #D7AD00 url(bat.png) no-repeat center;
+        background-size: 35%;
+    }
+    25% {
+        background: #E03236 url(bat.png) no-repeat center;
+        background-size: 35%;
+    }
+    35% {
+        background: #005F15 url(bat.png) no-repeat center;
+        background-size: 35%;
+    }
+    75% {
+        background: #629BB1 url(bat.png) no-repeat center;
+        background-size: 35%;
+    }
+    100% {
+        background: #4C5646 url(bat.png) no-repeat center;
+        background-size: 35%;
+    }
+}
+
+.mainBackground {
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    filter: blur(5px);
+    transition: $slowTransition;
+}
+
+.main {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background: rgba(255,255,255,0.9);
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: $slowTransition;
+}
+
+.main[active="true"] {
+    left: 0;
+    background: rgba(255,255,255,0.0);
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-shadow: inset 0px 0px 60px #000000;
+}
+
+.mainBackground[active="home"] {
+    background: #856161 url(night-bg.jpg) center;
+    background-size: cover;
+}
+
+.mainBackground[active="about"] {
+    background: #856161 url(gc-1.jpg) center;
+    background-size: cover;
+}
+
+.large {
+    font-family: 'BEBAS', Arial, Helvetica, sans-serif !important;
+    color: $white !important;
+    font-size: 19rem;
+    letter-spacing: -5px;
+    text-shadow:0px 5px 0px #000000;
+    font-weight: bold;
+    transition: all 1s ease;
+}
+
+.large[active="false"] {
+    opacity: 0.0;
+}
+
+.large[active="true"] {
+    opacity: 1.0;
+}
+
+.icon {
+    background: $black;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    border: 3px solid $white;
+    cursor: pointer;
+    transition: $fastTransition;
+}
+
+.icon[instagram="true"] {
+    background: $black url('instagram.png') no-repeat center;
+    background-size: 50%;
+}
+
+.icon[linkedin="true"] {
+    background: $black url('linkedin.png') no-repeat center;
+    background-size: 50%;
+}
+
+.icon[medium="true"] {
+    background: $black url('medium-size.png') no-repeat center;
+    background-size: 50%;
+}
+
+.icon[skype="true"] {
+    background: $black url('skype.png') no-repeat center;
+    background-size: 50%;
+}
+
+.icon[twitter="true"] {
+    background: $black url('twitter.png') no-repeat center;
+    background-size: 50%;
+}
+
+.icon[github="true"] {
+    background: $black url('github-sign.png') no-repeat center;
+    background-size: 50%;
+}
+
+.icon:hover{
+    background-color: $white;
+    border: 0;
+    box-shadow: inset 0px 0px 20px #000000;
+    transform: rotate(30deg);
+}
+
+.player{
+    visibility: hidden;
+}
+
+.links {
+    // position: fixed;
+    // z-index: 2;
+    // top: 80%;
+    // left:100%;
+    // width: 80%;
+    width: 50%;
+    opacity:0.0;
+    transition: $slowTransition;
+}
+
+.links[active="true"] {
+    width:100%;
+    opacity: 1.0;
+    // left: 10%;
+}
+
+.picture {
+    background: $black url('dp.jpg') center;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border: 3px solid $white;
+    border-radius: 100px;
+    margin-left: 45%;
+    filter: grayscale(100%);
+    transition: $slowTransition;
+}
+
+.picture:hover {
+    filter: grayscale(0%);
+}
+
+.navlinks {
+    position: fixed;
+    z-index: 3;
+    text-align: center;
+    color: #cccccc;
+    text-shadow:0px 0px 1px $white;
+    background-color: rgba(33, 63, 90, 0.7);
+    font-size: 30px;
+    cursor: pointer;
+    opacity:0.0;
+    transition: $fastTransition;
+}
+
+.navlinks:hover {
+    text-shadow: 0px 0px 3px $white;
+    background-color: rgba(33, 63, 90, 1.0);
+    box-shadow: 0px 0px 20px #000000;
+}
+
+.navlinks[left="true"] {
+    left: 0%;
+    top: 0%;
+    height: 100%;
+}
+
+.navlinks[right="true"] {
+    right: 0%;
+    top: 0;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $white !important;
+    font-family: 'Canterbury', Arial, Helvetica, sans-serif !important;
+    font-weight: bold;
+    text-shadow: 0px 2px 0px $black;
+}
+
+h1 {
+    font-size: 45px !important;
+}
+
+.white-glass {
+    color: $black;
+    font-family: 'Antic', serif;
+    font-size:20px;
+    padding: 0px;
+    background-color: rgba(255,255,255,0.8);
+}
