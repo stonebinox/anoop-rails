@@ -38,7 +38,7 @@ class Layout extends React.Component {
         if(frame<0) {
             frame=1;
         }
-        else if(frame > 1) {
+        else if(frame > 2) {
             frame=0;
         }
         this.setState({
@@ -59,6 +59,12 @@ class Layout extends React.Component {
                 mainbg: "about"
             });
             break;
+            case 2:
+            $("#projects").attr("active","true");
+            this.setState({
+                mainbg: "projects"
+            });
+            break;
         }
     }
 
@@ -73,6 +79,9 @@ class Layout extends React.Component {
                 <div className="mainBackground" active={this.state.mainbg}></div>
                 <div className="main" id="about">
                     <About />
+                </div>
+                <div className="main" id="projects">
+                    <Projects />
                 </div>
                 <div className="main" id="home">
                     <br/>

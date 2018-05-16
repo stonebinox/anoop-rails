@@ -123,6 +123,16 @@ body {
     }
 }
 
+.birdsLayer {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    height: 20%;
+    width: 100%;
+    overflow: hidden;
+}
+
 .mainBackground {
     position: fixed;
     z-index: 0;
@@ -137,7 +147,7 @@ body {
 
 .main {
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     background: rgba(255,255,255,0.9);
     left: 100%;
@@ -162,6 +172,11 @@ body {
 
 .mainBackground[active="about"] {
     background: #856161 url(gc-1.jpg) center;
+    background-size: cover;
+}
+
+.mainBackground[active="projects"] {
+    background: #856161 url(gc-night.jpg) center;
     background-size: cover;
 }
 
@@ -315,4 +330,11 @@ h1 {
     font-size:20px;
     padding: 0px;
     background-color: rgba(255,255,255,0.8);
+}
+
+.projects-background {
+    background: #000000 url(gc-comic.jpg) center;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
 }

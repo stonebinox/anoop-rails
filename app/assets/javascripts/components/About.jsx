@@ -8,10 +8,11 @@ class About extends React.Component {
             <div className="container">
                 <br/>
                 <br/>
-                <h1 class="text-left">About me - Anoop Santhanam</h1>
+                <h1 className="text-left">About me - Anoop Santhanam</h1>
                 <hr/>
                 <div className="white-glass">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/pjJMbukyrwk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/pjJMbukyrwk?rel=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                    <br/>
                     <br/>
                     <div className="row">
                         <div className="col-sm-2"></div>
