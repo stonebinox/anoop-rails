@@ -3,22 +3,22 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @font-face {
     font-family: BEBAS;
-    src: url(image_path("BEBAS.ttf"));
+    src: url(asset_path("BEBAS.ttf"));
 }
 
 @font-face {
     font-family: Canterbury;
-    src: url(image_path("canterbury.regular.ttf"));
+    src: url(asset_path("canterbury.regular.ttf"));
 }
 
 @font-face {
     font-family: Carson;
-    src: url(image_path("carson.regular.otf"));
+    src: url(asset_path("carson.regular.otf"));
 }
 
 @font-face {
     font-family: Antic;
-    src: url(image_path("antic-didone.regular.ttf"));
+    src: url(asset_path("antic-didone.regular.ttf"));
 }
 
 $black: #000000;
@@ -166,17 +166,17 @@ body {
 }
 
 .mainBackground[active="home"] {
-    background: #856161 url(night-bg.jpg) center;
+    background: #856161 url(image_path('night-bg.jpg')) center;
     background-size: cover;
 }
 
 .mainBackground[active="about"] {
-    background: #856161 url(gc-1.jpg) center;
+    background: #856161 url(image_path('gc-1.jpg')) center;
     background-size: cover;
 }
 
 .mainBackground[active="projects"] {
-    background: #856161 url(gc-night.jpg) center;
+    background: #856161 url(image_path('gc-night.jpg')) center;
     background-size: cover;
 }
 
@@ -209,32 +209,32 @@ body {
 }
 
 .icon[instagram="true"] {
-    background: $black url('instagram.png') no-repeat center;
+    background: $black url(image_path('instagram.png')) no-repeat center;
     background-size: 50%;
 }
 
 .icon[linkedin="true"] {
-    background: $black url('linkedin.png') no-repeat center;
+    background: $black url(image_path('linkedin.png')) no-repeat center;
     background-size: 50%;
 }
 
 .icon[medium="true"] {
-    background: $black url('medium-size.png') no-repeat center;
+    background: $black url(image_path('medium-size.png')) no-repeat center;
     background-size: 50%;
 }
 
 .icon[skype="true"] {
-    background: $black url('skype.png') no-repeat center;
+    background: $black url(image_path('skype.png')) no-repeat center;
     background-size: 50%;
 }
 
 .icon[twitter="true"] {
-    background: $black url('twitter.png') no-repeat center;
+    background: $black url(image_path('twitter.png')) no-repeat center;
     background-size: 50%;
 }
 
 .icon[github="true"] {
-    background: $black url('github-sign.png') no-repeat center;
+    background: $black url(image_path('github-sign.png')) no-repeat center;
     background-size: 50%;
 }
 
@@ -267,7 +267,7 @@ body {
 }
 
 .picture {
-    background: $black url('dp.jpg') center;
+    background: $black url(image_path('dp.jpg')) center;
     background-size: cover;
     width: 100px;
     height: 100px;
@@ -333,7 +333,7 @@ h1 {
 }
 
 .projects-background {
-    background: #000000 url(gc-comic.jpg) center;
+    background: #000000 url(image_path('gc-comic.jpg')) center;
     background-size: cover;
     width: 100%;
     height: 300px;
