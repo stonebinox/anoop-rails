@@ -70,7 +70,7 @@ body {
     border: 2px solid #D7AD00;
     text-align: center;
     border-radius: 100px;
-    background: #D7AD00 url(bat.png) no-repeat center;
+    background: #D7AD00 url(image_path("bat.png")) no-repeat center;
     background-size: 35%;
     box-shadow: 0px 10px 40px $black;
     overflow: none;
@@ -102,23 +102,23 @@ body {
 
 @keyframes colourChanger {
     0% {
-        background: #D7AD00 url(bat.png) no-repeat center;
+        background: #D7AD00 url(image_path("bat.png")) no-repeat center;
         background-size: 35%;
     }
     25% {
-        background: #E03236 url(bat.png) no-repeat center;
+        background: #E03236 url(image_path("bat.png")) no-repeat center;
         background-size: 35%;
     }
     35% {
-        background: #005F15 url(bat.png) no-repeat center;
+        background: #005F15 url(image_path("bat.png")) no-repeat center;
         background-size: 35%;
     }
     75% {
-        background: #629BB1 url(bat.png) no-repeat center;
+        background: #629BB1 url(image_path("bat.png")) no-repeat center;
         background-size: 35%;
     }
     100% {
-        background: #4C5646 url(bat.png) no-repeat center;
+        background: #4C5646 url(image_path("bat.png")) no-repeat center;
         background-size: 35%;
     }
 }
