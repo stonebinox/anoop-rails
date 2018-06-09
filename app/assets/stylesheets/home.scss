@@ -3,22 +3,22 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @font-face {
     font-family: BEBAS;
-    src: url(BEBAS.ttf);
+    src: url(image_path("BEBAS.ttf"));
 }
 
 @font-face {
     font-family: Canterbury;
-    src: url(canterbury.regular.ttf);
+    src: url(image_path("canterbury.regular.ttf"));
 }
 
 @font-face {
     font-family: Carson;
-    src: url(carson.regular.otf);
+    src: url(image_path("carson.regular.otf"));
 }
 
 @font-face {
     font-family: Antic;
-    src: url(antic-didone.regular.ttf);
+    src: url(image_path("antic-didone.regular.ttf"));
 }
 
 $black: #000000;
