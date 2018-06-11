@@ -8,7 +8,7 @@ class About extends React.Component {
             <div className="container">
                 <br/>
                 <br/>
-                <h1 className="text-left">About me - Anoop Santhanam</h1>
+                <h1 className="text-left dropshadow">About me</h1>
                 <hr/>
                 <div className="white-glass">
                     <iframe width="100%" height="315" src="https://www.youtube.com/embed/pjJMbukyrwk?rel=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
