@@ -316,7 +316,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     color: $white !important;
-    font-family: 'Canterbury', Arial, Helvetica, sans-serif !important;
+    font-family: 'BEBAS', Arial, Helvetica, sans-serif !important;
     font-weight: bold;
     text-shadow: 0px 2px 0px $black;
 }
@@ -325,22 +325,80 @@ h1 {
     font-size: 45px !important;
 }
 
-.white-glass {
-    color: $black;
-    font-family: 'Antic', serif;
-    font-size:20px;
-    padding: 0px;
-    background-color: rgba(255,255,255,0.8);
-}
-
 .projects-background {
     background: #000000 url(image_path('gc-comic.jpg')) center;
     background-size: cover;
     width: 100%;
     height: 300px;
 }
+
 .dropshadow {
     // background-color: #333333;
     letter-spacing: .1em;
-    text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 
+        0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 
+        0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 
+        0 12px 0 #181818, 0 13px 0 #161616, 
+        0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
 }
+
+.box {
+    width: 100%;
+    min-width: 250px;
+    display: block;
+    min-height: 50px;
+    height: auto;
+    position: relative;
+    border-radius: 5px;
+    background: rgba(51, 51, 51, 0.7);
+    margin-bottom: 40px;
+    padding: 15px 25px 10px 40px;
+    color: #ffffff;
+    box-shadow: 0px 5px 20px #000000;
+    font-family: 'Antic', Arial, Helvetica, sans-serif;
+    // font-weight: bold;
+    transition: background, box-shadow, transform 200ms ease-in-out;
+}
+
+.shadow {
+    position: relative;
+}
+
+.shadow:before {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 13px;
+    right: 7px;
+    width: 75%;
+    top: 0;
+    box-shadow: 0 15px 10px #000000;
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+    transition: all 150ms ease-in-out;
+}
+  
+.box:hover {
+    background: rgba(51, 51, 51, 1.0);
+    box-shadow: 0px 2px 2px #000000;
+    transform: scale(1.2);
+}
+
+.shadow:hover::before {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    bottom: 20px;
+    z-index: -10;
+}
+
+.circle {
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    border-radius: 50%;
+    box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 0 0 0 25px rgba(0,0,0,0.6);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+  
