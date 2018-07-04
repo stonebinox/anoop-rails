@@ -8,7 +8,7 @@ class About extends React.Component {
             <div className="container">
                 <br/>
                 <br/>
-                <h1 className="text-center dropshadow">About me</h1>
+                <h1 className="text-center burn">About me</h1>
                 <br/>
                 <div className="row">
                     <div className="col-sm-6">
