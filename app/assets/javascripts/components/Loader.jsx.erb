@@ -35,7 +35,7 @@ class Loader extends React.Component {
         imageCache.src = image;
         var that = this;
         imageCache.onload = function() {
-            if (pos < images.length - 1) {
+            if (pos < images.length) {
                 pos += 1;
                 that.loadImages(pos);
                 console.log("loading");
