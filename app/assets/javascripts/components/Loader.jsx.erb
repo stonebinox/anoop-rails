@@ -1,22 +1,60 @@
 class Loader extends React.Component {
     constructor(props) {
         super(props);
-        this.state={readyClass:"loaderText", readyText: "Loading", loaderClick: null, layout: null};
+        this.state = {
+            readyClass:"loaderText", 
+            readyText: "Loading", 
+            loaderClick: null, 
+            layout: null,
+            images: [
+                "<%= asset_path('night-bg.jpg') %>"
+            ];
+        };
         var that=this;
-        
-        setTimeout(function(){
-            $(".loader").css("animation-name","null");
-            $(".loader").css({
-                background: '#D7AD00 url(<%= asset_path("play.png") %>) no-repeat center',
-                backgroundSize: '35%'
-            });
-            $("#loaderBackground").css("background-color","#000000");
-            that.setState({
-                readyClass: "loaderText ready",
-                readyText: "Let us begin.",
-                loaderClick: that.handleClick.bind(that)
-            });
-        },(props.duration*1000));
+
+        this.loadImages(0);
+
+        # setTimeout(function(){
+        #     $(".loader").css("animation-name","null");
+        #     $(".loader").css({
+        #         background: '#D7AD00 url(<%= asset_path("play.png") %>) no-repeat center',
+        #         backgroundSize: '35%'
+        #     });
+        #     $("#loaderBackground").css("background-color","#000000");
+        #     that.setState({
+        #         readyClass: "loaderText ready",
+        #         readyText: "Let us begin.",
+        #         loaderClick: that.handleClick.bind(that)
+        #     });
+        # },(props.duration*1000));
+    }
+
+    loadImages(pos) {
+        var images = this.state.images;
+        var image = images[pos];
+        var imageCache = new Image();
+        imageCache.src = image;
+        imageCache.onload = function() {
+            if (pos < images.length - 1) {
+                pos += 1;
+                this.loadImages(pos);
+                console.log("loading");
+            }
+            else {
+                console.log("LOADED");
+                $(".loader").css("animation-name","null");
+                $(".loader").css({
+                    background: '#D7AD00 url(<%= asset_path("play.png") %>) no-repeat center',
+                    backgroundSize: '35%'
+                });
+                $("#loaderBackground").css("background-color","#000000");
+                this.setState({
+                    readyClass: "loaderText ready",
+                    readyText: "Let us begin.",
+                    loaderClick: this.handleClick.bind(this)
+                });
+            }
+        };
     }
 
     handleClick() {
