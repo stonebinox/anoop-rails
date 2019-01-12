@@ -30,6 +30,7 @@ class Loader extends React.Component {
 
     loadImages(pos) {
         var images = this.state.images;
+        console.log(images);
         var image = images[pos];
         var imageCache = new Image();
         imageCache.src = image;
