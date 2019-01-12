@@ -3,7 +3,7 @@ class Loader extends React.Component {
         super(props);
         this.state={readyClass:"loaderText", readyText: "Loading", loaderClick: null, layout: null};
         var that=this;
-        console.log(image_path('night-bg.jpg'));
+        
         setTimeout(function(){
             $(".loader").css("animation-name","null");
             $(".loader").css({
