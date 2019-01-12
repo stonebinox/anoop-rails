@@ -63,10 +63,10 @@ class Loader extends React.Component {
                 backgroundSize: '35%'
             });
             $("#loaderBackground").css("background-color","#000000");
-            that.setState({
+            this.setState({
                 readyClass: "loaderText ready",
                 readyText: "Let us begin.",
-                loaderClick: that.handleClick.bind(that)
+                loaderClick: this.handleClick.bind(this)
             });
         }
     }
