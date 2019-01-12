@@ -34,10 +34,11 @@ class Loader extends React.Component {
         var image = images[pos];
         var imageCache = new Image();
         imageCache.src = image;
+        var that = this;
         imageCache.onload = function() {
             if (pos < images.length - 1) {
                 pos += 1;
-                this.loadImages(pos);
+                that.loadImages(pos);
                 console.log("loading");
             }
             else {
@@ -48,10 +49,10 @@ class Loader extends React.Component {
                     backgroundSize: '35%'
                 });
                 $("#loaderBackground").css("background-color","#000000");
-                this.setState({
+                that.setState({
                     readyClass: "loaderText ready",
                     readyText: "Let us begin.",
-                    loaderClick: this.handleClick
+                    loaderClick: that.handleClick
                 });
             }
         };
