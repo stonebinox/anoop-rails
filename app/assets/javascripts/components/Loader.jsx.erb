@@ -10,8 +10,8 @@ class Loader extends React.Component {
                 "<%= asset_path('night-bg.jpg') %>"
             ]
         };
-        var that=this;
-
+        
+        this.handelClick = this.handleClick.bind(this);
         this.loadImages(0);
 
         /* setTimeout(function(){
@@ -51,7 +51,7 @@ class Loader extends React.Component {
                 this.setState({
                     readyClass: "loaderText ready",
                     readyText: "Let us begin.",
-                    loaderClick: this.handleClick.bind(this)
+                    loaderClick: this.handleClick
                 });
             }
         };
