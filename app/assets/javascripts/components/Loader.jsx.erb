@@ -14,19 +14,19 @@ class Loader extends React.Component {
 
         this.loadImages(0);
 
-        # setTimeout(function(){
-        #     $(".loader").css("animation-name","null");
-        #     $(".loader").css({
-        #         background: '#D7AD00 url(<%= asset_path("play.png") %>) no-repeat center',
-        #         backgroundSize: '35%'
-        #     });
-        #     $("#loaderBackground").css("background-color","#000000");
-        #     that.setState({
-        #         readyClass: "loaderText ready",
-        #         readyText: "Let us begin.",
-        #         loaderClick: that.handleClick.bind(that)
-        #     });
-        # },(props.duration*1000));
+        /* setTimeout(function(){
+            $(".loader").css("animation-name","null");
+            $(".loader").css({
+                background: '#D7AD00 url(<%= asset_path("play.png") %>) no-repeat center',
+                backgroundSize: '35%'
+            });
+            $("#loaderBackground").css("background-color","#000000");
+            that.setState({
+                readyClass: "loaderText ready",
+                readyText: "Let us begin.",
+                loaderClick: that.handleClick.bind(that)
+            });
+        },(props.duration*1000)); */
     }
 
     loadImages(pos) {
